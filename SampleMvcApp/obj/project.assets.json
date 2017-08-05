@@ -10096,10 +10096,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lodoss118\\Desktop\\auth0-aspnetcore-mvc-samples-master\\Quickstart\\02-Login-Custom\\SampleMvcApp\\SampleMvcApp.csproj",
+      "projectUniqueName": "C:\\Users\\lodoss118\\Desktop\\Auth0 Flow\\SampleMvcApp\\SampleMvcApp.csproj",
       "projectName": "SampleMvcApp",
-      "projectPath": "C:\\Users\\lodoss118\\Desktop\\auth0-aspnetcore-mvc-samples-master\\Quickstart\\02-Login-Custom\\SampleMvcApp\\SampleMvcApp.csproj",
-      "outputPath": "C:\\Users\\lodoss118\\Desktop\\auth0-aspnetcore-mvc-samples-master\\Quickstart\\02-Login-Custom\\SampleMvcApp\\obj\\",
+      "projectPath": "C:\\Users\\lodoss118\\Desktop\\Auth0 Flow\\SampleMvcApp\\SampleMvcApp.csproj",
+      "outputPath": "C:\\Users\\lodoss118\\Desktop\\Auth0 Flow\\SampleMvcApp\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

@@ -31,7 +31,6 @@ namespace SampleMvcApp.Controllers
 
         public AccountController(IOptions<AppSettings> appSettings, ILogger<AccountController> logger)
         {
-            logger.LogInformation("###### appSettings: {0}", appSettings.Value);
             _appSettings = appSettings.Value;
             _logger = logger;
 
@@ -124,7 +123,7 @@ namespace SampleMvcApp.Controllers
                 try
                 {
                     SalesforceService.Response emailResponse = SalesforceService.SendEmail(_sfdcTokenManager.instance_url, _sfdcTokenManager.access_token, vm.EmailAddress).Result;
-                    _logger.LogInformation("###### CODE: {0}", emailResponse.code);
+                    _logger.LogInformation("Email Response Code: {0}", emailResponse.code);
 
                     ViewData["status"] = (emailResponse.code == "10008" ? "Password reset email has been sent" : "Something went wrong");
                 }
@@ -148,20 +147,35 @@ namespace SampleMvcApp.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Reset(ResetViewModel vm, string userid, string email, string token)
+        private void ValidateReset(ResetViewModel vm, string userid, string email, string token)
         {
-            ViewData["status"] = "";
-
             if (string.IsNullOrWhiteSpace(userid))
             {
                 ModelState.AddModelError("", "Missing user id param");
+            }
+
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                ModelState.AddModelError("", "Missing email param");
+            }
+
+            if (string.IsNullOrWhiteSpace(token))
+            {
+                ModelState.AddModelError("", "Missing token param");
             }
 
             if (vm.NewPassword1 != vm.NewPassword2)
             {
                 ModelState.AddModelError("", "Passwords don't match");
             }
+        }
+
+        [HttpPost]
+        public IActionResult Reset(ResetViewModel vm, string userid, string email, string token)
+        {
+            ViewData["status"] = "";
+
+            ValidateReset(vm, userid, email, token);
 
             if (ModelState.IsValid)
             {
@@ -169,8 +183,8 @@ namespace SampleMvcApp.Controllers
                 {
                     Auth0.ManagementApi.Models.User userResult = null;
                     SalesforceService.Response hashResponse = SalesforceService.CheckHash(_sfdcTokenManager.instance_url, _sfdcTokenManager.access_token, System.Net.WebUtility.HtmlDecode(email), token).Result;
-                    _logger.LogInformation("###### CODE: {0}", hashResponse.code);
-                    _logger.LogInformation("###### USER ID: {0}", userid);
+                    _logger.LogInformation("Hash Code Response: {0}", hashResponse.code);
+                    _logger.LogInformation("User Id: {0}", userid);
 
                     //Hash matches
                     if (hashResponse.code == "10014")
@@ -214,7 +228,7 @@ namespace SampleMvcApp.Controllers
                 Audience = _appSettings.Auth0.Api.Audience
             });
 
-            _logger.LogInformation("###### ACCESS_TOKEN_MANAGEMENT_API: {0}", req.AccessToken);
+            _logger.LogInformation("Auth0 Access Token MAPI: {0}", req.AccessToken);
             return req.AccessToken;
         }
 
