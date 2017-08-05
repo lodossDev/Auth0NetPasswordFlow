@@ -1,0 +1,11 @@
+C:\Users\lodoss118\Desktop\auth0-aspnetcore-mvc-samples-master\Quickstart\02-Login-Custom\SampleMvcApp\bin\Debug\netcoreapp1.1\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\lodoss118\Desktop\auth0-aspnetcore-mvc-samples-master\Quickstart\02-Login-Custom\SampleMvcApp\bin\Debug\netcoreapp1.1\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\lodoss118\Desktop\auth0-aspnetcore-mvc-samples-master\Quickstart\02-Login-Custom\SampleMvcApp\bin\Debug\netcoreapp1.1\SampleMvcApp.deps.json
+C:\Users\lodoss118\Desktop\auth0-aspnetcore-mvc-samples-master\Quickstart\02-Login-Custom\SampleMvcApp\bin\Debug\netcoreapp1.1\SampleMvcApp.runtimeconfig.json
+C:\Users\lodoss118\Desktop\auth0-aspnetcore-mvc-samples-master\Quickstart\02-Login-Custom\SampleMvcApp\bin\Debug\netcoreapp1.1\SampleMvcApp.runtimeconfig.dev.json
+C:\Users\lodoss118\Desktop\auth0-aspnetcore-mvc-samples-master\Quickstart\02-Login-Custom\SampleMvcApp\bin\Debug\netcoreapp1.1\SampleMvcApp.dll
+C:\Users\lodoss118\Desktop\auth0-aspnetcore-mvc-samples-master\Quickstart\02-Login-Custom\SampleMvcApp\bin\Debug\netcoreapp1.1\SampleMvcApp.pdb
+C:\Users\lodoss118\Desktop\auth0-aspnetcore-mvc-samples-master\Quickstart\02-Login-Custom\SampleMvcApp\obj\Debug\netcoreapp1.1\SampleMvcApp.AssemblyInfo.cs
+C:\Users\lodoss118\Desktop\auth0-aspnetcore-mvc-samples-master\Quickstart\02-Login-Custom\SampleMvcApp\obj\Debug\netcoreapp1.1\SampleMvcApp.dll
+C:\Users\lodoss118\Desktop\auth0-aspnetcore-mvc-samples-master\Quickstart\02-Login-Custom\SampleMvcApp\obj\Debug\netcoreapp1.1\SampleMvcApp.pdb
+C:\Users\lodoss118\Desktop\auth0-aspnetcore-mvc-samples-master\Quickstart\02-Login-Custom\SampleMvcApp\obj\Debug\netcoreapp1.1\SampleMvcApp.csprojResolveAssemblyReference.cache
